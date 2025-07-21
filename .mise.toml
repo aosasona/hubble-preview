@@ -1,0 +1,78 @@
+[settings]
+experimental = true
+
+[tools]
+go = "1.24.0"
+# python = "3.13.2"
+direnv = "2.35.0"
+pnpm = "10.4.0"
+golangci-lint = "2.0.2"
+
+[tasks."web:build:ui"]
+dir = "./web/ui"
+run = ["pnpm install", "pnpm build"]
+
+[tasks."web:ui:dev"]
+dir = "./web/ui"
+run = ["pnpm install", "pnpm dev"]
+
+[tasks."web:build"]
+dir = "./web"
+depends = ["web:generate"]
+run = ["mkdir -p ./bin", "go build -o ./bin/web ./cmd/hubble"]
+
+[tasks."web:dev"]
+dir = "."
+run = [
+	"direnv allow",
+	"docker compose -f docker-compose.dev.yml up -d",
+	"docker attach --no-stdin hubble-web",
+]
+
+[tasks."web:dev:rebuild"]
+dir = "."
+run = [
+	"direnv allow",
+	"docker compose -f docker-compose.dev.yml up -d --build web --remove-orphans",
+	"docker attach --no-stdin hubble-web",
+]
+
+[tasks."web:dev:down"]
+dir = "."
+run = ["docker compose -f docker-compose.dev.yml down"]
+
+[tasks."web:prod"]
+dir = "."
+run = [
+	"direnv allow",
+	"docker compose -f docker-compose.prod.yml up -d --build",
+	"docker attach --no-stdin hubble-web",
+]
+
+[tasks."web:generate"]
+dir = "./web"
+run = ["go generate ./..."]
+
+[tasks."db:verify"]
+dir = "./web"
+run = "go tool github.com/sqlc-dev/sqlc/cmd/sqlc verify"
+
+[tasks."db:gen"]
+dir = "./web"
+run = "go tool github.com/sqlc-dev/sqlc/cmd/sqlc generate"
+
+[tasks."update:submodules"]
+dir = "."
+run = [
+	"git submodule update --init --recursive",
+	"git submodule foreach git pull origin master",
+]
+
+[tasks."schema:build"]
+dir = "./web"
+run = "capnp compile -I capnp-schema -I $(go env GOPATH)/pkg/mod/capnproto.org/go/capnp/v3@v3.0.1-alpha.2/std/ --src-prefix=capnp-schema/go -ogo:schema capnp-schema/go/*.capnp"
+
+[tasks."schema:update"]
+dir = "./web"
+depends = ["update:submodules"]
+depends_post = ["schema:build"]

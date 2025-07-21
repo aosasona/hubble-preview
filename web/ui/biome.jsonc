@@ -1,0 +1,23 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"linter": {
+		"rules": {
+			"nursery": {
+				"useSortedClasses": {
+					"level": "warn",
+					"fix": "safe",
+					"options": {
+						"attributes": ["className"],
+						"functions": ["cn"]
+					}
+				}
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"trailingCommas": "all",
+			"semicolons": "always"
+		}
+	}
+}

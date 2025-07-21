@@ -1,0 +1,21 @@
+{{ define "content" }}
+<!-- prettier-ignore -->
+<p>
+	Hello <strong>{{.FirstName}}</strong>,
+</p>
+
+<!-- prettier-ignore -->
+<p>
+	You recently requested to change the email address associated with your Hubble account. To complete the process, please enter the following code:
+</p>
+
+<div class="highlight">
+	<p style="font-size: 20px">{{.Code}}</p>
+</div>
+
+<!-- prettier-ignore -->
+<p>This email was sent to <b>{{.Email}}</b> on {{.SentAt}}, the code contained in this email is only valid for {{.ValidFor}} minutes.</p>
+
+<p>If you did not make this request, please ignore this email, we will never ask you for this email or the code contained within this email.</p>
+
+{{ end }}

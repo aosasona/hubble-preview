@@ -1,0 +1,79 @@
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: ./deployment/dev.Dockerfile
+    container_name: hubble-web
+    volumes:
+      - ./web:/app
+    env_file:
+      - .envrc
+    ports:
+      - "3288:3288"
+    depends_on:
+      - postgres
+      - minio
+      - ollama
+  #
+  # Postgres + PGVector
+  #
+  postgres:
+    container_name: postgres
+    image: pgvector/pgvector:pg17
+    restart: always
+    shm_size: 512mb
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: hubble-web
+      POSTGRES_PASSWORD: hubble-web-password
+      POSTGRES_DB: hubble
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  #
+  # Minio
+  #
+  minio:
+    container_name: minio
+    image: minio/minio:RELEASE.2023-03-20T20-16-18Z
+    environment:
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+    ports:
+      - "9001:9001"
+      - "9000:9000"
+    volumes:
+      - minio-data:/minio_data
+    command: minio server /minio_data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+  #
+  # OpenAI-compatible server
+  #
+  ollama:
+    image: docker.io/ollama/ollama:latest
+    ports:
+      - "9200:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    container_name: ollama
+    pull_policy: always
+    tty: true
+    restart: always
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+      - OLLAMA_HOST=0.0.0.0
+#
+# Networks
+networks:
+  default:
+    name: hubble-net
+#
+# Volumes
+volumes:
+  postgres-data:
+  minio-data:
+  ollama-data:

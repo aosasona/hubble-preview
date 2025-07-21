@@ -1,0 +1,42 @@
+{{ define "content" }}
+<!-- prettier-ignore -->
+<p>
+	Welcome <strong>{{.FirstName}}</strong>,
+</p>
+
+<!-- prettier-ignore -->
+<p>
+	You recently signed up to Hubble using this email address. To confirm we have the correct address and to protect your privacy, please verify your email using one of the options below:
+</p>
+
+<p>
+	<strong>Option 1:</strong>
+	Tap the button below to verify instantly.
+</p>
+<p>
+	<a href="{{.Link}}" class="primary-button">Verify Email</a>
+</p>
+
+<p>
+	<strong>Option 2:</strong>
+	Enter the following verification code in the app or website:
+</p>
+<div class="highlight">
+	<p style="font-size: 18px">{{.Code}}</p>
+</div>
+
+<p>
+	<strong>Option 3:</strong>
+	Copy and paste the following link into your browser:
+</p>
+
+<div class="highlight">
+	<p>{{.Link}}</p>
+</div>
+
+<!-- prettier-ignore -->
+<p>This email was sent to <b>{{.Email}}</b> on {{.SentAt}}, the token and link contained in this email are only valid for {{.ValidFor}} minutes.</p>
+
+<p>If you did not sign up to Hubble, please ignore this email, we will never ask you for this email or the token contained within this email.</p>
+
+{{ end }}

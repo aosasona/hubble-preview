@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<style>
+			body,
+			html {
+				padding: 0;
+				margin: 0;
+				border: 0;
+				color: #151515;
+				background: #fff;
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: normal;
+				font-family:
+					Source Sans Pro,
+					sans-serif,
+					emoji;
+			}
+
+			body {
+				padding: 20px 30px;
+			}
+
+			strong {
+				font-weight: bold;
+			}
+
+			em {
+				font-style: italic;
+			}
+
+			p {
+				display: block;
+				margin: 10px 0;
+				font-family: inherit;
+			}
+
+			small {
+				font-size: 12px;
+				line-height: 16px;
+			}
+
+			hr {
+				display: block;
+				height: 1px;
+				border: 0;
+				width: 100%;
+				background: #e0e0e0;
+				margin: 12px 0;
+			}
+
+			a {
+				color: #2a2a2a;
+				text-decoration: underline;
+				text-underline-offset: 2px;
+			}
+
+			.primary-button {
+				display: inline-block;
+				vertical-align: top;
+				border: 0;
+				border-radius: 4px;
+				cursor: pointer;
+				color: #fff !important;
+				background: #151515 !important;
+				text-decoration: none !important;
+				width: auto;
+				text-align: center;
+				padding: 8px 24px;
+				margin: 5px 0;
+				font-family:
+					Source Sans Pro,
+					sans-serif,
+					emoji;
+				font-size: 14px;
+				box-sizing: border-box;
+			}
+
+			.highlight {
+				background-color: #f1f1f1;
+				border: 1px solid #dfdfdf;
+				padding: 10px 12px;
+				border-radius: 4px;
+				margin: 8px 0;
+			}
+
+			.highlight p {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hubble</h1>
+		<hr />
+
+		{{ template "content" . }}
+
+		<hr />
+		&copy; 2025 Hubble. All rights reserved.
+	</body>
+</html>

@@ -1,0 +1,25 @@
+{{ define "content" }}
+<!-- prettier-ignore -->
+<p>Hello <strong>{{.FirstName}}</strong>,</p>
+
+<!-- prettier-ignore -->
+<p>
+	You recently attempted to {{.Reason}}. We need you to verify this action using the One-Time Password contained in this email.
+</p>
+
+<!-- prettier-ignore -->
+<p>
+	IP Address - <b>{{.IpAddr}}</b>
+</p>
+
+<p>Enter the following verification code to continue:</p>
+<div class="highlight">
+	<p style="font-size: 18px">{{.Code}}</p>
+</div>
+
+<!-- prettier-ignore -->
+<p>This email was sent to <b>{{.Email}}</b> on {{.SentAt}}, the one-time password contained in this email is only valid for {{.ValidFor}} minutes.</p>
+
+<p>If you did not initiate this request, please ignore this email, we will never ask you for this email or the code contained within this email.</p>
+
+{{ end }}

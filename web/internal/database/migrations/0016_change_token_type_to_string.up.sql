@@ -1,0 +1,2 @@
+ALTER TABLE auth_sessions ALTER COLUMN token TYPE VARCHAR(255) USING token::VARCHAR(255);
+

@@ -1,0 +1,35 @@
+@url=http://localhost:3288/api/v1
+
+# Ping
+GET {{url}}/ping
+Content-Type: application/json
+Accept: application/json
+
+###
+
+# @name sign_up
+POST {{url}}/auth/sign-up
+Content-Type: application/json
+Accept: application/json
+
+{
+	"d": {
+		"first_name": "John",
+		"last_name": "Doe",
+		"email": "{{$uuid}}@example.com",
+		"password": "{{$uuid}}",
+		"username": "user{{$randomInt}}"
+	}
+}
+
+###
+
+# @name sign_in
+POST {{url}}/auth/sign-in
+Content-Type: application/json
+Accept: application/json
+
+{
+	"d": {
+	}
+}

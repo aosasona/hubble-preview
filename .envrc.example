@@ -1,0 +1,44 @@
+export HUBBLE_PORT=3288 # The port to run hubble on
+export HUBBLE_APP_URL="http://localhost:5173" # The URL to the frontend (to deliver appropriate emails, for example)
+export HUBBLE_ENVIRONMENT="development" # can also be production or staging
+
+export HUBBLE_ENABLE_OPEN_TELEMETRY=false # not used at the moment
+export HUBBLE_ENABLE_EMAIL_SERVICES=true # not entirely used at the moment
+export HUBBLE_ENABLE_DEBUG=false # this is overriden and set to true if HUBBLE_ENVIRONMENT is development
+
+export HUBBLE_POSTGRES_DSN="postgres://hubble-web:hubble-web-password@postgres:5432/hubble?sslmode=disable"
+# These are all required for email functionality (and since there are quite a bit of them; they are required in general)
+export HUBBLE_SMTP_HOST=
+export HUBBLE_SMTP_USERNAME=
+export HUBBLE_SMTP_PASSWORD=
+export HUBBLE_SMTP_PORT=
+export HUBBLE_SMTP_FROM_NAME=
+export HUBBLE_SMTP_FROM_URL=
+
+export HUBBLE_DRIVER_KV="badgerdb" # can also be etcd (other ones will be added in the future)
+export HUBBLE_ETCD_ENDPOINTS="" # set this if you are using etcd
+export HUBBLE_BADGER_DB_PATH="badger.db" # set this if you are using badger, ensure the path is writable
+
+export HUBBLE_KEY_COOKIE_SECRET="" # required to sign cookies
+
+# This is a comma separated list of TOTP secrets in the format "v1_<secret>,v2_<secret>,v3_<secret>"
+# This is required for TOTP keys encryption
+export HUBBLE_KEY_TOTP_SECRETS=""
+
+# This is required for file storage (can also be any other Minio-go-compatible server)
+export HUBBLE_MINIO_ENDPOINT="minio:9000"
+export HUBBLE_MINIO_ACCESS_KEY="minioadmin"
+export HUBBLE_MINIO_SECRET_KEY="minioadmin"
+export HUBBLE_MINIO_USE_SSL=false
+
+export HUBBLE_PLUGINS_DIR=".plugins" # This is the directory where the plugins-related files are stored; default is `${cwd}/.plugins`
+
+# Configure the OpenAI-compatible server here - optional
+export HUBBLE_LLM_BASE_URL=""
+export HUBBLE_LLM_API_KEY=""
+# The name of the embedding model to use, e.g. text-embedding-ada-002, nomic-embed-text, etc
+export HUBBLE_LLM_EMBEDDING_MODEL="" # You need to set this if you want to enable semantic vector generation for entry chunks
+
+# Search controls
+export HUBBLE_SEARCH_MODE="threshold" # or "score", The default "threshold" mode will execlude less accurate (relative to the top-scored) results i.e. below HUBBLE_SEARCH_THRESHOLD
+export HUBBLE_SEARCH_THRESHOLD=30.0 # if you are using the threshold, you need to set this or it will default to `30.0`

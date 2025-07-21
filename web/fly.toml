@@ -1,0 +1,27 @@
+# fly.toml app configuration file generated for hubble on 2025-01-17T01:11:43Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'hubble'
+primary_region = 'lhr'
+
+[build]
+dockerfile = "./deployment/prod.Dockerfile"
+
+[http_service]
+internal_port = 3288
+force_https = true
+auto_stop_machines = 'stop'
+auto_start_machines = true
+min_machines_running = 1
+processes = ['app']
+
+[mounts]
+source = "hubble_data"
+destination = "/data"
+
+[[vm]]
+memory = '2gb'
+cpu_kind = 'shared'
+cpus = 2

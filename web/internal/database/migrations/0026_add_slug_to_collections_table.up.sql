@@ -1,0 +1,3 @@
+ALTER TABLE collections
+ADD COLUMN slug text UNIQUE NOT NULL DEFAULT '';
+

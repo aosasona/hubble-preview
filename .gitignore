@@ -1,0 +1,7 @@
+*.db
+tmp/
+bin/
+__debug*
+web/.plugins
+.plugins
+*.src.txt

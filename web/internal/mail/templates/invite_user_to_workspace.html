@@ -1,0 +1,26 @@
+{{ define "content" }}
+<!-- prettier-ignore -->
+<p>Hello</p>
+
+<p>
+	<b>{{.InitiatorName}}</b>
+	has invited you to join their workspace ({{.WorkspaceName}}) on Hubble. To accept the invitation, please click the button below.
+</p>
+
+<p>
+	<a href="{{.Host}}/workspace/join/{{.InviteID}}" class="primary-button">Accept Invite</a>
+</p>
+
+<p>Alternatively, you can copy and paste the following link into your browser:</p>
+<div class="highlight">
+	<p>{{.Host}}/workspace/join/{{.InviteID}}</p>
+</div>
+
+<!-- prettier-ignore -->
+<p>
+	This email was sent to <b>{{.Email}}</b> on {{.SentAt}}, the link contained in this email is only valid for 14 days.
+</p>
+
+<p>If you are not expecting this email, please ignore it.</p>
+
+{{ end }}

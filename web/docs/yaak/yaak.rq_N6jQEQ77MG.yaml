@@ -1,0 +1,32 @@
+type: http_request
+model: http_request
+id: rq_N6jQEQ77MG
+createdAt: 2025-03-27T00:22:02.597421
+updatedAt: 2025-03-27T14:18:08.934039
+workspaceId: wk_FDUNAStMsv
+folderId: fl_7bdhEcG8Vv
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "d": {
+        "first_name": "John",
+        "last_name": "Smith",
+        "username": "jsmith",
+        "email": "ayodeji@keystroke.tools",
+        "password": "Password123"
+      }
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: Gxc2eUxsUJ
+method: POST
+name: Sign up
+sortPriority: 0.001
+url: ${[ API_URL ]}/auth/sign-up
+urlParameters: []
