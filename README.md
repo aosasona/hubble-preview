@@ -1,8 +1,9 @@
 # Hubble
 
-> [!WARNING]
+> [!NOTE]
 >
-> This document is a work-in-progress, please create a new issue if you need help or have any questions.
+> This is a preview version of my dissertation project and should NOT be used day-to-day.
+> A proper ground-up rewrite & rethink of some of the architectural choices is required and planned.
 
 Hubble is a lightweight, unified and intelligent knowledge base management software designed for user-extensibility and self-hosting.
 
@@ -24,20 +25,28 @@ Hubble is a lightweight, unified and intelligent knowledge base management softw
 - Setup the environment variables by copying `.envrc.example` to `.envrc` and updating the values
 - Start the backend services in development using either of the following:
   - Mise
+
   ```sh
   mise run web:dev
   ```
+
   - Docker Compose
+
   ```sh
   docker compose -f docker-compose.dev.yml up -d
   ```
+
   > This will start a postgres server, a minio server and an Ollama server
+
 - Start the frontend using either of the following methods:
   - Mise
+
   ```sh
   mise run web:ui:dev
   ```
+
   - pnpm
+
   ```sh
   pnpm install
   pnpm dev
