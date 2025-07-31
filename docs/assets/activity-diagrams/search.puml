@@ -1,0 +1,16 @@
+@startuml
+|User|
+start
+:Enter search query;
+|System|
+:Debounce change event by 750ms;
+:Preprocess query (generate embeddings for semantic search);
+:Perform hybrid search (lexical using tsvector and semantic using pgvector);
+:Combine results using RRF;
+:Determine highest-scoring result;
+:Filter out low-scoring chunks based on instance threshold (compared to the highest-scoring chunk);
+:Render and display ranked results;
+|User|
+:View search results;
+stop
+@enduml

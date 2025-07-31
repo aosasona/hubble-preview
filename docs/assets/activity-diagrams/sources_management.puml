@@ -1,0 +1,33 @@
+@startuml
+|User|
+start
+:Go to Settings;
+:Go to Plugin Settings;
+:Click "Manage Sources";
+
+partition "Add Source" {
+    :Click "+" button;
+    :Enter source URL;
+	:Review source info;
+	:Confirm action;
+}
+
+|System|
+:Validate URL and clone repository;
+:Save source and cache metadata;
+:Notify user of status;
+
+partition "Remove Source" {
+|User|
+:Click 3-dot icon on source;
+:Select "Remove source";
+:Confirm dialog;
+
+|System|
+:Verify source exists;
+:Remove associated plugins;
+:Delete database record;
+:Delete cache directory;
+:Notify user of status;
+}
+@enduml

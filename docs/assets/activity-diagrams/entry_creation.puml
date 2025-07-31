@@ -1,0 +1,49 @@
+@startuml
+|User|
+start
+:Click "+" button or press "c";
+:Paste link(s), select or drop file(s);
+:Select collection (if not already in one);
+:Click "Import";
+
+|System|
+:Group entries for pre-processing;
+:Extract metadata from files and links;
+:Create all entries;
+:Queue created entries for processing;
+:Notify user of import status;
+
+|User|
+stop
+
+|System|
+start
+repeat
+:Process next queued entry;
+:Look up matching plugins for entry type with `on_create` hook (workspace-scoped);
+:Execute `on_create` hook on each matching plugin;
+:Plugin performs data transformation, chunking and language inference;
+:Generate cached `tsvector` from plain text chunks;
+:Queue chunks for semantic embedding (if enabled);
+repeat while (more entries?) is (yes)
+stop
+
+|System|
+start
+repeat
+:Process next chunk from embedding queue;
+:Send plain text content to LLM server;
+
+|LLM server|
+start
+:Generate 768-dimension embeddings;
+:Send back to system;
+
+|System|
+:Receive vector embedding;
+:Update chunk record with vector;
+:Mark queue item as complete;
+repeat while (more chunks?) is (yes)
+stop
+
+@enduml

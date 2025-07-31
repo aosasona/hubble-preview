@@ -1,0 +1,385 @@
+local-first:
+  type: article
+  title: "Local-first software: you own your data, in spite of the cloud"
+  author:
+    - Kleppmann, Martin
+    - Wiggins, Adam
+    - name: Hardenberg
+      given-name: Peter
+      prefix: van
+    - McGranaghan, Mark
+  date: 2019
+  page-range: 154–178
+  url: https://doi-org.northampton.idm.oclc.org/10.1145/3359591.3359737
+  serial-number:
+    doi: 10.1145/3359591.3359737
+    isbn: "9781450369954"
+  parent:
+    type: proceedings
+    title: Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software
+    publisher: Association for Computing Machinery
+    location: Athens, Greece
+    parent:
+      type: proceedings
+      title: Onward! 2019
+google-transformers-paper:
+  type: misc
+  title: Attention Is All You Need
+  author:
+    - Vaswani, Ashish
+    - Shazeer, Noam
+    - Parmar, Niki
+    - Uszkoreit, Jakob
+    - Jones, Llion
+    - Gomez, Aidan N.
+    - Kaiser, Lukasz
+    - Polosukhin, Illia
+  date: 2023
+  url: https://arxiv.org/abs/1706.03762
+  serial-number:
+    arxiv: "1706.03762"
+notion-ai:
+  type: misc
+  title: "Meet the new Notion AI. Get to know what it can do for you"
+  author: Evans, Drew
+  date: 2024
+  url: https://www.notion.so/blog/meet-the-new-notion-ai
+rbac:
+  type: article
+  title: RBAC models — concepts and trends
+  author: Bertino, Elisa
+  date: 2003
+  page-range: 511–514
+  url: https://www.sciencedirect.com/science/article/pii/S0167404803006096
+  serial-number:
+    doi: https://doi.org/10.1016/S0167-4048(03)00609-6
+    issn: 0167-4048
+  abstract: A key function in any information security infrastructure is represented by access control which concerns the ways according to which users can access resources in a computer systems. Access control is one of the most pervasive security mechanisms in use today and is present in almost all systems, from operating systems to database management systems. Access control is usually based on access permits, also called authorizations, specifying which subjects can access which objects for performing which actions. Access control, however, imposes great administrative and architectural challenges and also requires careful design. In particular, a relevant problem, especially when dealing with large systems, is represented by the complexity of access control administration. Access control administration deals with assigning and revoking authorizations.
+  parent:
+    type: periodical
+    title: Computers & Security
+    issue: 6
+    volume: 22
+docmost-intro:
+  type: article
+  title: Docmost is here
+  author: "Phil"
+  date: 2024
+  url: https://docmost.com/blog/docmost-is-here
+  parent:
+    type: periodical
+outline:
+  type: misc
+  title: Outline - Your team's knowledge base
+  author: General Outline, Inc
+  date: 2025
+  url: https://getoutline.com
+zoho:
+  type: misc
+  title: Your life's work, powered by our life's work
+  author: Zoho Corporation Pvt. Ltd
+  date: 2025
+  url: https://zoho.com
+selectric:
+  type: misc
+  title: Selectic - AI assistant for knowledge workers
+  author: Selectric
+  date: 2025
+  url: https://selectric.io
+levenshtein-based-retrieval:
+  type: article
+  title: Similarity Based Information Retrieval Using Levenshtein Distance Algorithm
+  author: Po, Daw
+  date: 2020
+  page-range: 6–17
+  serial-number:
+    doi: 10.31695/IJASRE.2020.33780
+  parent:
+    type: periodical
+    title: International Journal of Advances in Scientific Research and Engineering
+    volume: 6
+efficient-fuzzy-full-search:
+  type: article
+  title: Efficient fuzzy full-text type-ahead search
+  author:
+    - Li, Guoliang
+    - Ji, Shengyue
+    - Li, Chen
+    - Feng, Jianhua
+  date: 2011
+  page-range: 617–640
+  url: https://api.semanticscholar.org/CorpusID:8942945
+  parent:
+    type: periodical
+    title: The VLDB Journal
+    volume: 20
+original-rag-paper:
+  type: misc
+  title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+  author:
+    - Lewis, Patrick
+    - Perez, Ethan
+    - Piktus, Aleksandra
+    - Petroni, Fabio
+    - Karpukhin, Vladimir
+    - Goyal, Naman
+    - Küttler, Heinrich
+    - Lewis, Mike
+    - Yih, Wen-tau
+    - Rocktäschel, Tim
+    - Riedel, Sebastian
+    - Kiela, Douwe
+  date: 2021
+  url: https://arxiv.org/abs/2005.11401
+  serial-number:
+    arxiv: "2005.11401"
+capnproto:
+  type: misc
+  title: "Cap&apos;n Proto: RPC Protocol"
+  author: Varda, Kenton
+  date: 2024
+  url: https://capnproto.org/rpc.html
+onnx-runtime:
+  type: misc
+  title: "ONNX Runtime: performant on-device inferencing - {M}icrosoft Open Source Blog — opensource.microsoft.com"
+  author: Faith Xu, Brian Lambert
+  date: 2023
+  url: https://opensource.microsoft.com/blog/2023/02/08/performant-on-device-inferencing-with-onnx-runtime
+event-sourcing-martin-fowler:
+  type: misc
+  title: Event Sourcing — martinfowler.com
+  author: Fowler, Martin
+  date: 2005
+  url: https://martinfowler.com/eaaDev/EventSourcing.html
+json-crdt:
+  type: article
+  title: A Conflict-Free Replicated JSON Datatype
+  author:
+    - Kleppmann, Martin
+    - Beresford, Alastair R.
+  date: 2017
+  page-range: 2733–2746
+  serial-number:
+    doi: 10.1109/TPDS.2017.2697382
+  parent:
+    type: periodical
+    title: IEEE Transactions on Parallel and Distributed Systems
+    issue: 10
+    volume: 28
+log-based-crdt:
+  type: article
+  title: Log-Based CRDT for Edge Applications
+  author:
+    - Saquib, Nazmus
+    - Krintz, Chandra
+    - Wolski, Rich
+  date: 2022
+  page-range: 126–137
+  serial-number:
+    doi: 10.1109/IC2E55432.2022.00021
+  parent:
+    type: proceedings
+    title: 2022 IEEE International Conference on Cloud Engineering (IC2E)
+    issue: ""
+    volume: 0
+thinking-in-events:
+  type: article
+  title: "Thinking in Events: From Databases to Distributed Collaboration Software"
+  author:
+    - Kleppmann, Martin
+  date: 2021
+  url: https://martin.kleppmann.com/papers/debs21-keynote.pdf
+gdpr-is-your-consent-valid:
+  type: article
+  title: "GDPR: Is your consent valid?"
+  author:
+    - Breen, Stephen
+    - Ouazzane, Karim
+    - Patel, Preeti
+  date: 2020
+  page-range: 19–24
+  url: https://doi.org/10.1177/0266382120903254
+  serial-number:
+    doi: 10.1177/0266382120903254
+  parent:
+    type: periodical
+    title: Business Information Review
+    issue: 1
+    volume: 37
+overview-data-protection-act:
+  type: misc
+  title: An overview of the Data Protection Act 2018
+  author: "Information Commissioner's Office"
+  date: 2018
+  url: https://ico.org.uk/media/for-organisations/documents/2614158/ico-introduction-to-the-data-protection-bill.pdf
+bmx-paper:
+  type: misc
+  title: 'BMX: Entropy-weighted Similarity and Semantic-enhanced Lexical Search'
+  author:
+    - Li, Xianming
+    - Lipp, Julius
+    - Shakir, Aamir
+    - Huang, Rui
+    - Li, Jing
+  date: 2024
+  url: https://arxiv.org/abs/2408.06643
+  serial-number:
+    arxiv: '2408.06643'
+bm25-and-beyond:
+  type: article
+  title: 'The Probabilistic Relevance Framework: BM25 and Beyond'
+  author:
+    - Robertson, Stephen
+    - Zaragoza, Hugo
+  date: 2009-04
+  page-range: 333–389
+  url: https://doi.org/10.1561/1500000019
+  serial-number:
+    doi: 10.1561/1500000019
+    issn: 1554-0669
+  abstract: 'The Probabilistic Relevance Framework (PRF) is a formal framework for document retrieval, grounded in work done in the 1970—1980s, which led to the development of one of the most successful text-retrieval algorithms, BM25. In recent years, research in the PRF has yielded new retrieval models capable of taking into account document meta-data (especially structure and link-graph information). Again, this has led to one of the most successful Web-search and corporate-search algorithms, BM25F. This work presents the PRF from a conceptual point of view, describing the probabilistic modelling assumptions behind the framework and the different ranking algorithms that result from its application: the binary independence model, relevance feedback models, BM25 and BM25F. It also discusses the relation between the PRF and other statistical models for IR, and covers some related topics, such as the use of non-textual features, and parameter optimisation for models with free parameters.'
+  parent:
+    type: periodical
+    title: Found. Trends Inf. Retr.
+    publisher: Now Publishers Inc.
+    location: Hanover, MA, USA
+    issue: 4
+    volume: 3
+jwt-rfc:
+  type: misc
+  title: 'JSON Web Token (JWT)'
+  author:
+    - Jones, Michael B.
+    - Bradley, John
+    - Sakimura, Nat
+  date: 2015-05
+  publisher: RFC Editor
+  issue: 7519
+  page-total: 30
+  url: https://www.rfc-editor.org/info/rfc7519
+  serial-number:
+    doi: 10.17487/RFC7519
+  note: RFC 7519
+  abstract: JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is used as the payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption (JWE) structure, enabling the claims to be digitally signed or integrity protected with a Message Authentication Code (MAC) and/or encrypted.
+  parent:
+    type: misc
+    title: Request for Comments
+martinez_gil_2017_automated_knowledgebase_management:
+  type: misc
+  title: 'Automated knowledge base management: A survey'
+  author: Martinez-Gil, Jorge
+  date: 2017-09
+  publisher: OSF Preprints
+  serial-number:
+    doi: 10.1016/j.cosrev.2015.09.001
+adobe-fast-forward-comparing:
+  type: misc
+  title: Fast-forward — comparing a 1980s supercomputer to a modern smartphone
+  author: Team, Adobe Acrobat
+  date: 2022
+  url: https://blog.adobe.com/en/publish/2022/11/08/fast-forward-comparing-1980s-supercomputer-to-modern-smartphone
+brian-ripley-statics:
+  type: anthos
+  title: 197 How computing has changed statistics
+  author: Ripley, Brian D.
+  date: 2005
+  url: https://doi.org/10.1093/acprof:oso/9780198566540.003.0011
+  serial-number:
+    doi: 10.1093/acprof:oso/9780198566540.003.0011
+    isbn: '9780198566540'
+  abstract: This chapter describes the effects on statistical work of the massive increase in the availability of computers and in their speed and storage capacities. The questions tackled concern the use of this power to work with larger datasets; to use more realistic models and better ways to fit them; to explore much larger classes of models; to attempt a more realistic analysis of existing simple models; and to better visualize data, or fitted models, or their combination. Related issues are discussed using a variety of examples. It is argued that statistical practice is affected most by the type of available statistical software. Open-source software, software quality, and graphical software are evaluated and illustrated using classification trees and serial brain scans.
+  parent:
+    type: anthology
+    title: 'Celebrating Statistics: Papers in honour of Sir David Cox on his 80th birthday'
+    publisher: Oxford University Press
+intelligent-computing-challenges:
+  type: article
+  title: 'Intelligent Computing: The Latest Advances, Challenges, and Future'
+  author:
+    - Zhu, Shiqiang
+    - Yu, Ting
+    - Xu, Tao
+    - Chen, Hongyang
+    - Dustdar, Schahram
+    - Gigan, Sylvain
+    - Gunduz, Deniz
+    - Hossain, Ekram
+    - Jin, Yaochu
+    - Lin, Feng
+    - Liu, Bo
+    - Wan, Zhiguo
+    - Zhang, Ji
+    - Zhao, Zhifeng
+    - Zhu, Wentao
+    - Chen, Zuoning
+    - Durrani, Tariq S.
+    - Wang, Huaimin
+    - Wu, Jiangxing
+    - Zhang, Tongyi
+    - Pan, Yunhe
+  date: 2023
+  page-range: 6
+  url: https://spj.science.org/doi/abs/10.34133/icomputing.0006
+  serial-number:
+    doi: 10.34133/icomputing.0006
+  abstract: 'Computing is a critical driving force in the development of human civilization. In recent years, we have witnessed the emergence of intelligent computing, a new computing paradigm that is reshaping traditional computing and promoting digital revolution in the era of big data, artificial intelligence, and internet of things with new computing theories, architectures, methods, systems, and applications. Intelligent computing has greatly broadened the scope of computing, extending it from traditional computing on data to increasingly diverse computing paradigms such as perceptual intelligence, cognitive intelligence, autonomous intelligence, and human–computer fusion intelligence. Intelligence and computing have undergone paths of different evolution and development for a long time but have become increasingly intertwined in recent years: Intelligent computing is not only intelligence oriented but also intelligence driven. Such cross-fertilization has prompted the emergence and rapid advancement of intelligent computing. Intelligent computing is still in its infancy, and an abundance of innovations in the theories, systems, and applications of intelligent computing is expected to occur soon. We present the first comprehensive survey of literature on intelligent computing, covering its theory fundamentals, the technological fusion of intelligence and computing, important applications, challenges, and future perspectives. We believe that this survey is highly timely and will provide a comprehensive reference and cast valuable insights into intelligent computing for academic and industrial researchers and practitioners.'
+  parent:
+    type: periodical
+    title: Intelligent Computing
+    issue: ''
+    volume: 2
+localai:
+  type: misc
+  title: 'LocalAI: The free, Open source OpenAI alternative'
+  author: Giacinto, Ettore Di
+  date: 2023
+  publisher: GitHub
+  url: https://github.om/go-skynet/LocalAI
+context-aware-reranking:
+  type: misc
+  title: Context-aware Reranking with Utility Maximization for Recommendation
+  author:
+    - Xi, Yunjia
+    - Liu, Weiwen
+    - Dai, Xinyi
+    - Tang, Ruiming
+    - Zhang, Weinan
+    - Liu, Qing
+    - He, Xiuqiang
+    - Yu, Yong
+  date: 2022
+  url:
+    value: https://arxiv.org/abs/2110.09059
+    date: 2025-04-01
+  serial-number:
+    arxiv: '2110.09059'
+Rackauckas_2024:
+  type: article
+  title: 'Rag-Fusion: A New Take on Retrieval Augmented Generation'
+  author: Rackauckas, Zackary
+  date: 2024-02
+  page-range: 37–47
+  url: http://dx.doi.org/10.5121/ijnlc.2024.13103
+  serial-number:
+    doi: 10.5121/ijnlc.2024.13103
+    issn: 2319-4111
+  parent:
+    type: periodical
+    title: International Journal on Natural Language Computing
+    publisher: Academy, Industry Research Collaboration Center (AIRCC)
+    issue: 1
+    volume: 13
+sso-wall-of-shame:
+  type: Web
+  title: 'The SSO Tax'
+  author: Rob Chahin
+  url:
+    value: https://sso.tax
+    date: 2025-03-20
+wasm-core:
+  type: Web
+  title: 'WebAssembly Core Specification'
+  url:
+    value: https://www.w3.org/TR/wasm-core-2
+    date: 2024-12-18
+  date: 2018

@@ -1,0 +1,33 @@
+
+@startuml
+|User|
+start
+:Return to Plugin Settings;
+
+partition "Install/Update Plugin" {
+    :Click "Install/Update";
+    :Review plugin info and permissions;
+    :Confirm action;
+}
+
+|System|
+:Clone source from Git URL;
+:Extract plugin metadata;
+:Copy files to configured plugin directory;
+:Save or update plugin database record;
+:Notify user of status;
+
+partition "Uninstall Plugin" {
+|User|
+:Click "Remove" on plugin;
+
+|System|
+:Delete plugin record from database;
+:Clean up plugin cache;
+:Notify user of status;
+}
+
+|User|
+stop
+
+@enduml
